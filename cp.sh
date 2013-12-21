@@ -15,7 +15,7 @@ else
     DEST=./
 fi
 
-set -A LISTFILE .bashrc .vimrc .zshrc .tmux.conf
+set -A LISTFILE .bashrc .vimrc .zshrc .tmux.conf .git-prompt.sh
 set -A LISTDIR  .vim
 
 for I in ${LISTFILE[@]}
