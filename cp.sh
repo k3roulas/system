@@ -1,4 +1,4 @@
-#!/bin/ksh
+#!/bin/bash
 if [ $# -ne "1" ] || [ "$1" != "install"  ] && [ "$1" != "save"  ]
 then
     echo "usage :"
@@ -15,8 +15,8 @@ else
     DEST=./
 fi
 
-set -A LISTFILE .bashrc .vimrc .zshrc .tmux.conf .git-prompt.sh
-set -A LISTDIR  .vim
+LISTFILE=(.bashrc .vimrc .zshrc .tmux.conf .git-prompt.sh)
+LISTDIR=(.vim)
 
 for I in ${LISTFILE[@]}
 do
@@ -27,4 +27,6 @@ for I in ${LISTDIR[@]}
 do
     cp -R $SOURCE$I $DEST$I
 done
+
+echo "Done"
 
