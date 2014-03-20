@@ -113,4 +113,5 @@ fi
 
 set -o vi
 
-
+# export
+export GIT_EDITOR="vim"
